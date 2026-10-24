@@ -1,4 +1,4 @@
-<title>Zoes Karten</title>
+<title>RockyStudy</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="theme-color" content="#F6F7FB">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -727,7 +727,7 @@ const micBtn = id => srUsable() ? `<button type="button" class="btn sm ghost mic
 let tab = "home";
 const TABS = [["home", "Heute", I.home], ["cards", "Karten", I.cards], ["listen", "Hören", I.ear], ["stats", "Fortschritt", I.chart]];
 function renderChrome() {
-  $("#brand").innerHTML = rocky("happy", "") + "<span>Zoes Karten</span>";
+  $("#brand").innerHTML = rocky("happy", "") + "<span>RockyStudy</span>";
   $("#openSettings").innerHTML = I.gear;
   const s = streak(); const st = $("#streak");
   st.innerHTML = I.flame + `<span>${s}</span>`; st.classList.toggle("off", s === 0);
@@ -1055,7 +1055,7 @@ async function shareFile(name, text, type) {
 }
 function exportSheet(kind) {
   const isB = kind === "backup"; const text = isB ? backupJSON() : ankiTXT();
-  const name = isB ? `zoes-karten-backup-${dkey()}.json` : `zoes-karten-${dkey()}.txt`;
+  const name = isB ? `rockystudy-backup-${dkey()}.json` : `rockystudy-${dkey()}.txt`;
   const type = isB ? "application/json" : "text/plain";
   const mark = () => { if (isB) { DB.settings.lastBackup = new Date().toISOString(); Store.saveSoon(); } };
   sheet(`<div class="sheet-head"><h2>${isB ? "Backup speichern" : "Als Anki-Text exportieren"}</h2><button class="xbtn" data-act="closeSheet" aria-label="Schließen">${I.x}</button></div>
@@ -1420,7 +1420,7 @@ function settingsSheet() {
   <button class="btn sm ghost" data-act="exportAnki">Als Anki-Text exportieren</button>
   <button class="link danger" id="sWipe" style="align-self:flex-start">Alle Daten von diesem Gerät löschen</button></div>
   <hr class="sep">
-  <p class="hint">Zoes Karten 2.1 · Lernplan mit FSRS (ts-fsrs, MIT-Lizenz). Rocky ist eine eigene Zeichnung nach Zoes Waschbär-Fotos.</p>`, s => {
+  <p class="hint">RockyStudy 2.1 · Lernplan mit FSRS (ts-fsrs, MIT-Lizenz). Rocky ist eine eigene Zeichnung nach Zoes Waschbär-Fotos.</p>`, s => {
     $("#sNew", s).onchange = e => { s0.newPerDay = Math.max(0, Math.min(200, +e.target.value || 0)); Store.saveSoon(); render(); };
     $("#sRet", s).oninput = e => { s0.retention = +e.target.value; $("#sRetO", s).textContent = Math.round(s0.retention * 100) + " %"; Store.saveSoon(); };
     $("#sTheme", s).onclick = e => { const b = e.target.closest("button"); if (!b) return; s0.theme = b.dataset.v; s.querySelectorAll("#sTheme button").forEach(x => x.setAttribute("aria-pressed", x === b)); applyTheme(); Store.saveSoon(); };

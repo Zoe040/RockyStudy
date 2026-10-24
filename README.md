@@ -1,4 +1,4 @@
-# Zoes Karten (PWA)
+# RockyStudy (PWA)
 
 Karteikarten-App fürs Studium mit Lernplan (FSRS), Kursen mit Unterstapeln, Lückentext, Hörmodus und Probeklausur. Läuft offline, installierbar auf dem iPhone.
 
@@ -18,7 +18,7 @@ Karteikarten-App fürs Studium mit Lernplan (FSRS), Kursen mit Unterstapeln, Lü
 
 1. Alle Dateien ins Repo laden.
 2. Repo → Settings → Pages → Branch `main`, Ordner `/ (root)` → Save.
-3. Nach ca. 1 Minute: https://zoe040.github.io/RockyStudy/
+3. Nach ca. 1 Minute: `https://<nutzername>.github.io/<repo>/`
 
 ## Installieren
 

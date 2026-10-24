@@ -1,6 +1,6 @@
 // Offline-Cache: App-Dateien werden beim ersten Besuch gespeichert, danach läuft die App auch ohne Netz.
 // Deine Karten liegen nicht hier, sondern in IndexedDB auf dem Gerät.
-const CACHE = 'zoes-karten-v3';
+const CACHE = 'rockystudy-v1';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './vendor/ts-fsrs.umd.js', './icons/icon-192.png', './icons/icon-180.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL))); self.skipWaiting(); });
 self.addEventListener('activate', e => {
