@@ -1,0 +1,7 @@
+# Karten und Backups gehören nicht ins Repo
+*.json
+!manifest.webmanifest
+*.txt
+!vendor/LICENSE-ts-fsrs.txt
+*.apkg
+__pycache__/
